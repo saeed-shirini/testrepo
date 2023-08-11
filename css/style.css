@@ -1,0 +1,188 @@
+@font-face{
+    font-family: bfont;
+    src:url(../B\ Fonts/B\ Nazanin.ttf);
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+html{
+    direction: rtl;
+    font-family: bfont;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+ul,li{
+    list-style: none;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding:20px 30px;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px solid #e2e2e2;
+    position: sticky;
+    top:0;
+}
+.navbar .right{
+    display: flex;
+    align-items: center;
+}
+.navbar .right .img-container {
+    display: flex;
+    align-items: center;
+    margin-left:20px;
+}
+.toggle-menu{
+    display: none;
+    padding:13px;
+    background-color: #e2e2e2;
+    border-radius: 4px;
+    border:none;
+    outline: none;
+    cursor: pointer;
+}
+.navbar .right ul.menu-list{
+    display: flex;
+    align-items:center;
+    list-style: none;
+}
+.navbar .right ul.menu-list li{
+    margin:0 10px;
+}
+
+.navbar .right ul.menu-list li a{
+    padding:7px;
+    font-weight: bold;
+}
+/* navigator */
+.navigator{
+    margin:20px 0;
+    font-size: 0.8rem;
+}
+
+/* main section */
+.main{
+    color:#333;
+
+}
+.main h2{
+    font-weight: lighter;
+    padding:20px 0;
+}
+.main p{
+    font-size: 1.3rem;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+.main .section{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin:60px 0;
+}
+.main .section img{
+    width: 100%;
+}
+.main .section .right,.main .section .left{
+    width: 50%;
+    margin-left: 30px;
+}
+
+/* footer */
+footer{
+    background:url("../images/footer-bg.png") repeat center center;
+    background-size: cover;
+    padding: 20px 30px;
+    max-width: 1200px;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    font-size: 1.1rem;
+}
+footer ul li{
+    color:gray;
+    font-size: 1em;
+}
+footer .address,footer .contact{
+    border-right: 0.5px solid  gray;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    min-height: 200px;
+}
+
+footer .address h4,footer .address ul,footer .contact h4,footer .contact ul{
+    padding: 14px 0;
+}
+footer .social-media a{
+    padding:5px ;
+    margin:15px;
+}
+footer .social-media a i{
+    font-size: 2rem;
+    color:gray;
+}
+    
+/* ads */
+.ads{
+    background-color:#99fc05;
+    width: 100%;
+}
+.ads .container{
+    padding:10px 30px;
+    display: flex;
+}
+.ads .container h4{
+    margin-left:15px;
+}
+
+@media screen and (max-width:870px){
+    .toggle-menu{
+        display: block;
+    }
+    .navbar{
+        position: relative;
+    }
+    .navbar .right ul.menu-list{
+        display: none;
+    }
+    .navbar .right ul.menu-list.active{
+        display: block;
+        background-color:#e2e2e2 ;
+        position: absolute;
+        top:100%;
+        right:0;
+        left:0;
+        text-align: center;
+    }
+    .navbar .right ul.menu-list.active li{
+        padding:15px 0;
+    }
+    .main .section{
+        flex-direction: column;
+    }
+    .main .section .right,.main .section .left{
+        width: 100%;
+    }
+    footer{
+        flex-wrap: wrap;
+    }
+    footer .address,footer .contact,footer .social-media,footer .brands{
+        display: flex;
+        justify-content: center;
+        padding:20px 0;
+        width: 50%;
+        align-items: center;
+    }
+}
